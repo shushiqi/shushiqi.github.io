@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>web | 舒十七</title>
+  <title>React(1) | 舒十七</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个小菜鸟的Blog">
+  <meta name="description" content="render()组件内必须有render return时只能返回一行，返回多行时用`()`包裹 行内样式使用json">
 <meta name="keywords" content="前端web, JS, React, Webpack">
-<meta property="og:type" content="website">
-<meta property="og:title" content="web">
-<meta property="og:url" content="http://yoursite.com/web/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React(1)">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/React-1/index.html">
 <meta property="og:site_name" content="舒十七">
-<meta property="og:description" content="一个小菜鸟的Blog">
+<meta property="og:description" content="render()组件内必须有render return时只能返回一行，返回多行时用`()`包裹 行内样式使用json">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-22T12:13:30.499Z">
+<meta property="og:updated_time" content="2019-07-26T14:06:31.377Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="web">
-<meta name="twitter:description" content="一个小菜鸟的Blog">
+<meta name="twitter:title" content="React(1)">
+<meta name="twitter:description" content="render()组件内必须有render return时只能返回一行，返回多行时用`()`包裹 行内样式使用json">
   
     <link rel="alternative" href="/atom.xml" title="舒十七" type="application/atom+xml">
   
@@ -169,27 +169,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="web-React-1" class="article article-type-web " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      web
+      React(1)
     </h1>
   
 
         
-        <a href="/web/index.html" class="archive-article-date">
-  	<time datetime="2019-07-22T12:13:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
+        <a href="/2019/07/26/React-1/" class="archive-article-date">
+  	<time datetime="2019-07-26T14:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="render"><a href="#render" class="headerlink" title="render()"></a>render()</h3><pre><code>组件内必须有render
+return时只能返回一行，返回多行时用`()`包裹</code></pre><blockquote>
+<p>行内样式使用json</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="redux——集中状态管理"><a href="#redux——集中状态管理" class="headerlink" title="redux——集中状态管理"></a>redux——集中状态管理</h2><ul>
+<li>provider：包在最外面<br>  全局包裹 程序</li>
+<li>connect：状态映射<br>  包裹组件</li>
+<li>reducer：状态对象<blockquote>
+<p>有任何写入操作时执行，第一次需初始化即<code>a=0</code></p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">funtion reducer(state=&#123;a=<span class="number">0</span>&#125;,action)&#123;</span><br><span class="line">    <span class="keyword">switch</span>(action.type)&#123;</span><br><span class="line">        <span class="keyword">case</span>(<span class="string">'INCREMENT'</span>):</span><br><span class="line">            <span class="keyword">return</span> a++</span><br><span class="line">        <span class="keyword">case</span>(<span class="string">'DCREMENT'</span>):</span><br><span class="line">            <span class="keyword">return</span> a--</span><br><span class="line">        defailt:</span><br><span class="line">            <span class="keyword">return</span> a</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="redux单向数据流"><a href="#redux单向数据流" class="headerlink" title="redux单向数据流"></a>redux单向数据流</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">state --同步--&gt; component</span><br><span class="line">component --触发--&gt; action</span><br><span class="line">action --更新--&gt; state</span><br></pre></td></tr></table></figure>
+
+<h3 id="react-router-dom"><a href="#react-router-dom" class="headerlink" title="react-router-dom"></a>react-router-dom</h3><ul>
+<li>Router 路由</li>
+<li>Route 路由配置项</li>
+<li>Link 跳转</li>
+</ul>
+<blockquote>
+<p>react 不支持 async!</p>
+<blockquote>
+<p>react依赖于jsx jsx依赖于ES6</p>
+</blockquote>
+</blockquote>
+
       
 
       
@@ -268,7 +295,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/web/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/26/React-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,6 +307,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/22/React小记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React小记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -301,7 +338,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#render"><span class="toc-number">1.</span> <span class="toc-text">render()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redux——集中状态管理"><span class="toc-number"></span> <span class="toc-text">redux——集中状态管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#redux单向数据流"><span class="toc-number">0.1.</span> <span class="toc-text">redux单向数据流</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-router-dom"><span class="toc-number">1.</span> <span class="toc-text">react-router-dom</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -343,7 +380,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
