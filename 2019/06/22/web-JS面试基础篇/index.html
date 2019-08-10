@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ES6 基本语法（1） | 舒十七</title>
+  <title>[web]JS面试基础篇 | 舒十七</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ES6的学习">
-<meta name="keywords" content="ES6">
+  <meta name="description" content="JS数据类型 基本数据类型null、undefined、String、number 引用数据类型Object">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6 基本语法（1）">
-<meta property="og:url" content="http://yoursite.com/2019/04/05/ES6-基本语法（1）/index.html">
+<meta property="og:title" content="[web]JS面试基础篇">
+<meta property="og:url" content="http://yoursite.com/2019/06/22/web-JS面试基础篇/index.html">
 <meta property="og:site_name" content="舒十七">
-<meta property="og:description" content="ES6的学习">
+<meta property="og:description" content="JS数据类型 基本数据类型null、undefined、String、number 引用数据类型Object">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-03T12:44:25.542Z">
+<meta property="og:updated_time" content="2019-08-10T10:48:18.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ES6 基本语法（1）">
-<meta name="twitter:description" content="ES6的学习">
+<meta name="twitter:title" content="[web]JS面试基础篇">
+<meta name="twitter:description" content="JS数据类型 基本数据类型null、undefined、String、number 引用数据类型Object">
   
     <link rel="alternative" href="/atom.xml" title="舒十七" type="application/atom+xml">
   
@@ -169,94 +169,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ES6-基本语法（1）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-web-JS面试基础篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ES6 基本语法（1）
+      [web]JS面试基础篇
     </h1>
   
 
         
-        <a href="/2019/04/05/ES6-基本语法（1）/" class="archive-article-date">
-  	<time datetime="2019-04-05T02:38:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-05</time>
+        <a href="/2019/06/22/web-JS面试基础篇/" class="archive-article-date">
+  	<time datetime="2019-06-22T10:39:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ES6的学习"><a href="#ES6的学习" class="headerlink" title="ES6的学习"></a>ES6的学习</h1><a id="more"></a>
-<table>
-<thead>
-<tr>
-<th>生命</th>
-<th align="center">是否能重复声明</th>
-<th align="center">是否能修改</th>
-<th>是否有块级作用域</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>变量var</td>
-<td align="center">是</td>
-<td align="center">无法限制（其他人的）修改</td>
-<td>否</td>
-</tr>
-<tr>
-<td>let</td>
-<td align="center">否</td>
-<td align="center">是一个变量-可以修改</td>
-<td>是</td>
-</tr>
-<tr>
-<td>const</td>
-<td align="center">否</td>
-<td align="center">是一个常量-不可以修改</td>
-<td>是</td>
-</tr>
-</tbody></table>
-<ul>
-<li>变量提升<br>变量可以在声明之前使用，值为undefined。</li>
-<li>暂时性死区<blockquote>
-<p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响<br>ES6 明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
-</blockquote>
+        <ol>
+<li>JS数据类型<ul>
+<li>基本数据类型null、undefined、String、number</li>
+<li>引用数据类型Object<a id="more"></a></li>
+<li>null和undefined</li>
+</ul>
 </li>
-</ul>
-<h2 id="1-箭头函数"><a href="#1-箭头函数" class="headerlink" title="1. 箭头函数"></a>1. 箭头函数</h2><ul>
-<li>如果只有一个参数 ()可以省</li>
-<li>如果只有一个return {}可以省<h2 id="2-剩余参数"><a href="#2-剩余参数" class="headerlink" title="2. 剩余参数"></a>2. 剩余参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show(a, b, ...arr)&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<ul>
-<li>拿到除开始参数以外的所有参数。即剩余参数，…arr必须为最后一个参数</li>
-<li>第二个用法——展开数组<br>map(可理解为映射)  reduce （汇总）数组返回一个数<br>filter （过滤器）  forEach (循环、迭代)</li>
-</ul>
-<h2 id="3-Promise"><a href="#3-Promise" class="headerlink" title="3. Promise"></a>3. Promise</h2><blockquote>
-<p>用于解决异步请求处理的回调地狱问题，已被ES6纳入规范<br><em>在业界初期，也有其他一些处理回调地狱问题的方法，比如Q和bluebird</em></p>
-</blockquote>
-<h4 id="一个例子"><a href="#一个例子" class="headerlink" title="一个例子"></a>一个例子</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(请求<span class="number">1</span>)</span><br><span class="line">    .then(请求<span class="number">2</span>(请求结果<span class="number">1</span>))</span><br><span class="line">    .then(请求<span class="number">3</span>(请求结果<span class="number">2</span>))</span><br><span class="line">    .then(请求<span class="number">4</span>(请求结果<span class="number">3</span>))</span><br><span class="line">    .catch(处理异常(异常信息))</span><br></pre></td></tr></table></figure>
-
-<h3 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h3><p>generator—特殊函数</p>
-<ul>
-<li>普通函数—执行到底</li>
-<li>generator—中间可以暂停</li>
-<li>generator函数的书写方法非常简单，即在常规的函数名前加一个“*”。而generator函数的使用也非常简单，在需要的地方使用yield表达式来暂停函数执行</li>
-</ul>
-<h4 id="一个例子-1"><a href="#一个例子-1" class="headerlink" title="一个例子"></a>一个例子</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> *<span class="title">foo</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> y = <span class="number">2</span> * (<span class="keyword">yield</span> (x + <span class="number">1</span>));</span><br><span class="line">    <span class="keyword">var</span> z = <span class="keyword">yield</span> (y / <span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> (x + y + z);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> it = foo( <span class="number">5</span> );</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log( it.next() );       <span class="comment">// &#123; value:6, done:false &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log( it.next( <span class="number">12</span> ) );   <span class="comment">// &#123; value:8, done:false &#125;</span></span><br><span class="line"><span class="built_in">console</span>.log( it.next( <span class="number">13</span> ) );   <span class="comment">// &#123; value:42, done:true &#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="async-await"><a href="#async-await" class="headerlink" title="async/await"></a>async/await</h3><blockquote>
-<p>函数是 Generator 函数的语法糖,使用关键字 async 来表示，在函数内部使用 await 来表示异步。</p>
-</blockquote>
-<ul>
-<li>Generator 的方式解决了 Promise 的一些问题，流程更加直观、语义化。但是 Generator 的问题在于，函数的执行需要依靠执行器，每次都需要通过 g.next() 的方式去执行。</li>
-<li>async 函数完美的解决了上面两种方式的问题。流程清晰，直观、语义明显。操作异步流程就如同操作同步流程。同时 async 函数自带执行器，执行的时候无需手动加载。<h4 id="一个例子-2"><a href="#一个例子-2" class="headerlink" title="一个例子"></a>一个例子</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getUserByAsync</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">let</span> user = <span class="keyword">await</span> fetchUser();</span><br><span class="line">     <span class="keyword">return</span> user;</span><br><span class="line"> &#125;</span><br><span class="line">getUserByAsync()</span><br><span class="line">.then(<span class="function"><span class="params">v</span> =&gt;</span> <span class="built_in">console</span>.log(v));</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
+</ol>
 
       
 
@@ -291,24 +231,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/web//" class="article-tag-list-link color4">web</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -358,7 +287,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/05/ES6-基本语法（1）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/22/web-JS面试基础篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -372,18 +301,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/26/React-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          React(1)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/30/CSS-1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS(1)</div>
+    <a href="/2019/06/20/CSS常见面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS常见面试题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -410,7 +330,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ES6的学习"><span class="toc-number">1.</span> <span class="toc-text">ES6的学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-箭头函数"><span class="toc-number">1.1.</span> <span class="toc-text">1. 箭头函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-剩余参数"><span class="toc-number">1.2.</span> <span class="toc-text">2. 剩余参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Promise"><span class="toc-number">1.3.</span> <span class="toc-text">3. Promise</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个例子"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">一个例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generator"><span class="toc-number">1.3.1.</span> <span class="toc-text">Generator</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个例子-1"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">一个例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async-await"><span class="toc-number">1.3.2.</span> <span class="toc-text">async/await</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一个例子-2"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">一个例子</span></a></li></ol></li></ol></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
