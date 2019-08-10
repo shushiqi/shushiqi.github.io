@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="舒十七">
 <meta property="og:description" content="ES6的学习">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-26T14:34:46.028Z">
+<meta property="og:updated_time" content="2019-08-03T12:44:25.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6 基本语法（1）">
 <meta name="twitter:description" content="ES6的学习">
@@ -218,6 +218,13 @@
 <td>是</td>
 </tr>
 </tbody></table>
+<ul>
+<li>变量提升<br>变量可以在声明之前使用，值为undefined。</li>
+<li>暂时性死区<blockquote>
+<p>只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响<br>ES6 明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。</p>
+</blockquote>
+</li>
+</ul>
 <h2 id="1-箭头函数"><a href="#1-箭头函数" class="headerlink" title="1. 箭头函数"></a>1. 箭头函数</h2><ul>
 <li>如果只有一个参数 ()可以省</li>
 <li>如果只有一个return {}可以省<h2 id="2-剩余参数"><a href="#2-剩余参数" class="headerlink" title="2. 剩余参数"></a>2. 剩余参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">show(a, b, ...arr)&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -520,15 +527,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
             
             <div class="clearfix"></div>
