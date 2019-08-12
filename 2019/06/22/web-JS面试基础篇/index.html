@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="舒十七">
 <meta property="og:description" content="JS数据类型  基本数据类型null、undefined、String、number、boolean 引用数据类型Object">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T07:21:39.426Z">
+<meta property="og:updated_time" content="2019-08-12T07:23:39.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[web]JS面试基础篇">
 <meta name="twitter:description" content="JS数据类型  基本数据类型null、undefined、String、number、boolean 引用数据类型Object">
@@ -394,7 +394,46 @@
 <td align="center">Session保存的东西多，占用服务器内存、依赖于cookie（sessionID保存在cookie）不安全、创建Session变量有很大的随意性，过度使用session变量将会导致代码不可读而且不好维护</td>
 </tr>
 </tbody></table>
-<p>为了克服cookie带来的一些限制，H5的WebStorage提供了两个重要内容：sessionStorage和localStorage<br>区别|sessionStorage(会话存储)|localStorage(本地存储)<br>:—:|:—:|:—:<br>生命周期|仅当前会话|永久有效<br>存储大小|5MB|5MB<br>存储位置|客户端|客户端<br>存储类型|字符串类型|字符串类型<br>获取方式|window.sessionStorage|window.localStorage<br>应用场景|敏感账号一次性登录|长期登录(或判断用户是否登录)</p>
+<p>为了克服cookie带来的一些限制，H5的WebStorage提供了两个重要内容：sessionStorage和localStorage</p>
+<table>
+<thead>
+<tr>
+<th align="center">区别</th>
+<th align="center">sessionStorage(会话存储)</th>
+<th align="center">localStorage(本地存储)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">生命周期</td>
+<td align="center">仅当前会话</td>
+<td align="center">永久有效</td>
+</tr>
+<tr>
+<td align="center">存储大小</td>
+<td align="center">5MB</td>
+<td align="center">5MB</td>
+</tr>
+<tr>
+<td align="center">存储位置</td>
+<td align="center">客户端</td>
+<td align="center">客户端</td>
+</tr>
+<tr>
+<td align="center">存储类型</td>
+<td align="center">字符串类型</td>
+<td align="center">字符串类型</td>
+</tr>
+<tr>
+<td align="center">获取方式</td>
+<td align="center">window.sessionStorage</td>
+<td align="center">window.localStorage</td>
+</tr>
+<tr>
+<td align="center">应用场景</td>
+<td align="center">敏感账号一次性登录</td>
+<td align="center">长期登录(或判断用户是否登录)</td>
+</tr>
+</tbody></table>
 <h3 id="WebStorage的优点："><a href="#WebStorage的优点：" class="headerlink" title="WebStorage的优点："></a>WebStorage的优点：</h3><ol>
 <li>存储空间更大：cookie为4KB，而WebStorage是5MB；</li>
 <li>节省网络流量：WebStorage不会传送到服务器，存储在本地的数据可以直接获取，也不会像cookie一样美词请求都会传送到服务器，所以减少了客户端和服务器端的交互，节省了网络流量；</li>
@@ -706,19 +745,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
