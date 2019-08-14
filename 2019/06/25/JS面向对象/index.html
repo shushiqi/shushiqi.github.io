@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="舒十七">
 <meta property="og:description" content="JS 模块包装格式都用过哪些，CommonJS、AMD、CMD。定义一个JS 模块代码，最精简的格式是怎样">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-12T09:55:35.636Z">
+<meta property="og:updated_time" content="2019-08-13T13:05:02.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS面向对象">
 <meta name="twitter:description" content="JS 模块包装格式都用过哪些，CommonJS、AMD、CMD。定义一个JS 模块代码，最精简的格式是怎样">
@@ -199,7 +199,24 @@
 
 </li>
 </ol>
-<p>实现类的继承<br><a href="https://blog.csdn.net/jikexueyuan5555/article/details/79345654" target="_blank" rel="noopener">点击查看更多</a></p>
+<p>实现类的继承  </p>
+<blockquote>
+<p>ES5实现继承的实质是先创建子类的实例对象this上，再将父类的方法添加到this上（Parennt.apply(this)）<br>ES6的实质是先将父类实例对象的属性和方法，加到this上面（调用super方法），然后再用子类的构造函数修改this。<br><a href="http://es6.ruanyifeng.com/#docs/class-extends" target="_blank" rel="noopener">阮一峰ES6入门</a></p>
+</blockquote>
+<p><a href="https://blog.csdn.net/jikexueyuan5555/article/details/79345654" target="_blank" rel="noopener">点击查看更多</a></p>
+<ol start="3">
+<li>深浅拷贝</li>
+</ol>
+<ul>
+<li><p>浅拷贝</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">shallowCopy</span>(<span class="params">src</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> dst = &#123;&#125;;</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">var</span> prop <span class="keyword">in</span> src) &#123;</span><br><span class="line">       <span class="keyword">if</span> (src.hasOwnProperty(prop)) &#123;</span><br><span class="line">           dst[prop] = src[prop];</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> dst;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">     name: <span class="string">'hashimoto'</span>,</span><br><span class="line">     age: <span class="number">18</span>,</span><br><span class="line">     hobby: [<span class="string">'sing'</span>, <span class="string">'movie'</span>]</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">let</span> obj2 = <span class="built_in">Object</span>.assign(&#123;&#125;, obj)</span><br><span class="line">   <span class="keyword">let</span> obj3 = &#123;</span><br><span class="line">     ...obj</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">let</span> obj4 = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>深拷贝</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// weakmap.set(key, value);</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj, hash = new WeakMap(</span>)) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(obj)</span><br><span class="line">      <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Date</span>) <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>(obj)</span><br><span class="line">      <span class="comment">// 如果不是复杂数据类型，直接返回</span></span><br><span class="line">      <span class="keyword">if</span> (obj === <span class="literal">null</span> || <span class="keyword">typeof</span> obj != <span class="string">'object'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (hash.has(obj)) &#123;</span><br><span class="line">        <span class="keyword">return</span> hash.get(obj)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">// 如果obj是数组，那么obj.constructor是[Function: Array]</span></span><br><span class="line">      <span class="comment">// 如果obj是数组，那么obj.constructor是[Function: Object]    </span></span><br><span class="line">      <span class="keyword">let</span> t = <span class="keyword">new</span> obj.constructor</span><br><span class="line">      hash.set(obj, t)</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        <span class="comment">// 递归</span></span><br><span class="line">        <span class="keyword">if</span> (obj.hasOwnProperty) &#123; <span class="comment">// hasOwnProperty 判断是否是自己的属性</span></span><br><span class="line">          t[key] = deepClone(obj[key], hash)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a href="https://juejin.im/post/5b5dcf8351882519790c9a2e" target="_blank" rel="noopener">点击查看更多</a></p>
 
       
 
@@ -446,7 +463,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -454,11 +475,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
             
             <div class="clearfix"></div>
