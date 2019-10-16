@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CSS常见面试题 | 舒十七</title>
+  <title>Tag: Reacr | 舒十七</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. CSS的盒子模型是怎样的？ CSS盒模型分为两种：标准的W3C盒子模型和IE盒子模型">
-<meta name="keywords" content="CSS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CSS常见面试题">
-<meta property="og:url" content="http://yoursite.com/2019/06/20/CSS常见面试题/index.html">
+  <meta name="description" content="一个小菜鸟的Blog">
+<meta name="keywords" content="前端web, JS, React, Webpack">
+<meta property="og:type" content="website">
+<meta property="og:title" content="舒十七">
+<meta property="og:url" content="http://yoursite.com/tags/Reacr/index.html">
 <meta property="og:site_name" content="舒十七">
-<meta property="og:description" content="1. CSS的盒子模型是怎样的？ CSS盒模型分为两种：标准的W3C盒子模型和IE盒子模型">
+<meta property="og:description" content="一个小菜鸟的Blog">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-10T10:40:54.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS常见面试题">
-<meta name="twitter:description" content="1. CSS的盒子模型是怎样的？ CSS盒模型分为两种：标准的W3C盒子模型和IE盒子模型">
+<meta name="twitter:title" content="舒十七">
+<meta name="twitter:description" content="一个小菜鸟的Blog">
   
     <link rel="alternative" href="/atom.xml" title="舒十七" type="application/atom+xml">
   
@@ -169,300 +168,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CSS常见面试题" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      CSS常见面试题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/16/对于antd中使用DatePicker的错误问题/" class="archive-article-date">
+  	<time datetime="2019-10-16T02:47:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/16/对于antd中使用DatePicker的错误问题/">对于antd中使用DatePicker的错误问题</a>
     </h1>
   
 
-        
-        <a href="/2019/06/20/CSS常见面试题/" class="archive-article-date">
-  	<time datetime="2019-06-20T01:01:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-CSS的盒子模型是怎样的？"><a href="#1-CSS的盒子模型是怎样的？" class="headerlink" title="1. CSS的盒子模型是怎样的？"></a>1. CSS的盒子模型是怎样的？</h2><ul>
-<li>CSS盒模型分为两种：标准的W3C盒子模型和IE盒子模型<a id="more"></a></li>
-<li>从外到内依次为margin、border、padding、content</li>
-<li>不同的是计算盒子宽高时IE盒子模型中content包含了padding以及border</li>
-</ul>
-<h2 id="2-position定位"><a href="#2-position定位" class="headerlink" title="2. position定位"></a>2. position定位</h2><p>  position有5个可能值</p>
-<ul>
-<li>static 默认值，没有定位，元素出现在正常的文档流中（即忽略top、left以及z-index等属性设置）</li>
-<li>absolute 绝对定位,查看父元素是否设置了<code>position: absolute | relative | fixed</code>中的一种，若父元素未设置，则查看父元素的父元素，依次向上直到文档body，将其设置为参照物进行 移动定位</li>
-<li>relative 相对定位，指相对该元素在文档流中的起始点的位置进行移动。此时该元素的原始位置空间仍被该元素占据，同时不会挤开其他元素，也就是有重叠部分时会重叠在其他元素上，课通过设置z-index</li>
-<li>fixed 生成固定定位的元素，相对浏览器窗口进行定位</li>
-<li>inherit 继承父元素position的属性</li>
-</ul>
-<h2 id="3-关于浮动和清浮"><a href="#3-关于浮动和清浮" class="headerlink" title="3. 关于浮动和清浮"></a>3. 关于浮动和清浮</h2><p>浮动： <strong>浮动元素会脱离文档流并向左/向右浮动，直到碰到父元素或者另一个浮动元素。</strong><br>浮动元素会脱离文档流，造成父元素高度坍塌问题，所以此时需要清浮。</p>
-<ul>
-<li>clear清浮： 在被清除浮动元素上添加足够的清除空间；<blockquote>
-<p>clear：左侧和右侧均不允许出现浮动元素；</p>
-</blockquote>
-</li>
-<li>BFC清浮：<br>我们可以给父元素添加以下属性来触发BFC：<ul>
-<li>float 为 left | right</li>
-<li>overflow 为 hidden | auto | scorll</li>
-<li>display 为 table-cell | table-caption | inline-block | flex | inline-flex</li>
-<li>position 为 absolute | fixed</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-如何保持浮层水平垂直居中"><a href="#4-如何保持浮层水平垂直居中" class="headerlink" title="4. 如何保持浮层水平垂直居中"></a>4. 如何保持浮层水平垂直居中</h2><ul>
-<li>居中元素宽高确定时<ul>
-<li>absolute + 负margin （PC端有兼容性要求，宽高固定时推荐使用）</li>
-<li>absolute + margin auto</li>
-<li>absolute + calc</li>
-</ul>
-</li>
-<li>居中元素宽高不确定时<ul>
-<li>absolute + transform</li>
-<li>lineheight</li>
-<li>writing-mode</li>
-<li>table</li>
-<li>css-table （PC端有兼容要求，宽高不固定时推荐使用）</li>
-<li>flex  （PC端无兼容性要求或移动端推荐使用）</li>
-<li>grid</li>
-</ul>
-</li>
-</ul>
-<p><a href="https://juejin.im/post/5b9a4477f265da0ad82bf921" target="_blank" rel="noopener">点击查看</a></p>
-<h2 id="5-样式的层级关系？选择器的优先级？"><a href="#5-样式的层级关系？选择器的优先级？" class="headerlink" title="5. 样式的层级关系？选择器的优先级？"></a>5. 样式的层级关系？选择器的优先级？</h2><ul>
-<li>CSS优先级：内联(<code>style=&quot;&quot;</code>) &gt; 内联样式表(<code>&lt;style&gt;</code>) | 外链样式表(<code>&lt;link&gt;</code>) &gt; 浏览器缺省<blockquote>
-<p>内联样式表和外链样式表取决于定义的位置顺序。</p>
-</blockquote>
-</li>
-<li>选择器优先级：ID选择器 &gt; 类选择器 | 属性选择器 | 伪类选择器 &gt; 元素选择器<blockquote>
-<p>!important: 当在一个样式声明中使用一个!important 规则时，此声明将覆盖任何其他声明</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="6-抽离样式模块怎么写，说出思路，有无实践经验"><a href="#6-抽离样式模块怎么写，说出思路，有无实践经验" class="headerlink" title="6. 抽离样式模块怎么写，说出思路，有无实践经验"></a>6. 抽离样式模块怎么写，说出思路，有无实践经验</h2><ul>
-<li>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。<blockquote>
-<p>最简单的初始化方法： * {padding: 0; margin: 0;} （强烈不建议）</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td &#123; <span class="attr">margin</span>:<span class="number">0</span>; padding:<span class="number">0</span>; &#125;</span><br><span class="line">       body, button, input, select, textarea &#123; <span class="attr">font</span>:<span class="number">12</span>px/<span class="number">1.5</span>tahoma, arial, \<span class="number">5</span>b8b\<span class="number">4</span>f53; &#125;</span><br><span class="line">       h1, h2, h3, h4, h5, h6&#123; font-size:<span class="number">100</span>%; &#125;</span><br><span class="line">       address, cite, dfn, em, <span class="keyword">var</span> &#123; font-style:normal; &#125;</span><br><span class="line">       code, kbd, pre, samp &#123; font-family:couriernew, courier, monospace; &#125;</span><br><span class="line">       small&#123; font-size:<span class="number">12</span>px; &#125;</span><br><span class="line">       ul, ol &#123; list-style:none; &#125;</span><br><span class="line">       a &#123; text-decoration:none; &#125;</span><br><span class="line">       a:hover &#123; text-decoration:underline; &#125;</span><br><span class="line">       sup &#123; vertical-align:text-top; &#125;</span><br><span class="line">       sub&#123; vertical-align:text-bottom; &#125;</span><br><span class="line">       legend &#123; color:#000; &#125;</span><br><span class="line">       fieldset, img &#123; <span class="attr">border</span>:<span class="number">0</span>; &#125;</span><br><span class="line">       button, input, select, textarea &#123; font-size:<span class="number">100</span>%; &#125;</span><br><span class="line">       table &#123; border-collapse:collapse; border-spacing:<span class="number">0</span>; &#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="7-px和em和rem的区别"><a href="#7-px和em和rem的区别" class="headerlink" title="7. px和em和rem的区别"></a>7. px和em和rem的区别</h2><ul>
-<li>px:表示“绝对尺寸”</li>
-<li>em:表示相对尺寸，其相对于当前对象内文本的font-size</li>
-<li>re:表示相对尺寸，其参考对象为根元素<html>的font-size</html></li>
-</ul>
-<h2 id="8-CSS中link-和-import的区别"><a href="#8-CSS中link-和-import的区别" class="headerlink" title="8. CSS中link 和@import的区别"></a>8. CSS中link 和@import的区别</h2><ul>
-<li>@import是 CSS 提供的语法规则，只有的作用；</li>
-<li>link是HTML提供的标签，不仅可以加载 CSS 文件，还可以定义 RSS、rel 连接属性等。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>区别</th>
-<th align="center">link</th>
-<th align="right">@import</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>来源</td>
-<td align="center">HTML提供的标签</td>
-<td align="right">CSS 提供的语法规则</td>
-</tr>
-<tr>
-<td>作用</td>
-<td align="center">加载 CSS 文件，还可以定义 RSS、rel 连接属性等</td>
-<td align="right">导入样式表</td>
-</tr>
-<tr>
-<td>加载页面时</td>
-<td align="center">同时加载</td>
-<td align="right">页面加载完毕后被加载</td>
-</tr>
-<tr>
-<td>兼容性区别</td>
-<td align="center">HTML提出，没有兼容问题</td>
-<td align="right">CSS2.1提出，IE5+可用</td>
-</tr>
-</tbody></table>
-<h2 id="9-了解flex吗？"><a href="#9-了解flex吗？" class="headerlink" title="9. 了解flex吗？"></a>9. 了解flex吗？</h2><p>flex是flex-grow，flex-shrink和flex-basis的简写，第一个为必选，后面两个为可选.</p>
-<blockquote>
-<p>默认值为0 1 auto，第一个属性必选，后两个属性可选。</p>
-<ul>
-<li>因此<code>flex: 1</code>占据剩余空间的实质是<code>flex-grow</code>的属性</li>
-<li>可以用 flex:auto; 代替 flex: 1 1 auto;；</li>
-<li>可以用 flex: none;代替 flex: 0 0 auto；</li>
-</ul>
-</blockquote>
-<p>更多信息点击<a href="https://www.cnblogs.com/qingchunshiguang/p/8011103.html" target="_blank" rel="noopener">flex属性</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Reacr</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/20/CSS常见面试题/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/06/22/web-JS面试基础篇/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          [web]JS面试基础篇
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/19/微信小程序学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信小程序学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-CSS的盒子模型是怎样的？"><span class="toc-number">1.</span> <span class="toc-text">1. CSS的盒子模型是怎样的？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-position定位"><span class="toc-number">2.</span> <span class="toc-text">2. position定位</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-关于浮动和清浮"><span class="toc-number">3.</span> <span class="toc-text">3. 关于浮动和清浮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-如何保持浮层水平垂直居中"><span class="toc-number">4.</span> <span class="toc-text">4. 如何保持浮层水平垂直居中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-样式的层级关系？选择器的优先级？"><span class="toc-number">5.</span> <span class="toc-text">5. 样式的层级关系？选择器的优先级？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-抽离样式模块怎么写，说出思路，有无实践经验"><span class="toc-number">6.</span> <span class="toc-text">6. 抽离样式模块怎么写，说出思路，有无实践经验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-px和em和rem的区别"><span class="toc-number">7.</span> <span class="toc-text">7. px和em和rem的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-CSS中link-和-import的区别"><span class="toc-number">8.</span> <span class="toc-text">8. CSS中link 和@import的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-了解flex吗？"><span class="toc-number">9.</span> <span class="toc-text">9. 了解flex吗？</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -485,9 +244,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
