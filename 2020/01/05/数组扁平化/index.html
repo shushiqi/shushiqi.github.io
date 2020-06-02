@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>舒十七</title>
+  <title>数组扁平化 | 舒十七</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个小菜鸟的Blog">
-<meta name="keywords" content="前端web, JS, React, Webpack">
-<meta property="og:type" content="website">
-<meta property="og:title" content="舒十七">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="数组扁平化相关 请实现一个flattenDeep函数，把多维数组扁平化">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组扁平化">
+<meta property="og:url" content="http://yoursite.com/2020/01/05/数组扁平化/index.html">
 <meta property="og:site_name" content="舒十七">
-<meta property="og:description" content="一个小菜鸟的Blog">
+<meta property="og:description" content="数组扁平化相关 请实现一个flattenDeep函数，把多维数组扁平化">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-02T07:04:33.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="舒十七">
-<meta name="twitter:description" content="一个小菜鸟的Blog">
+<meta name="twitter:title" content="数组扁平化">
+<meta name="twitter:description" content="数组扁平化相关 请实现一个flattenDeep函数，把多维数组扁平化">
   
     <link rel="alternative" href="/atom.xml" title="舒十七" type="application/atom+xml">
   
@@ -168,110 +169,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-CSS-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-数组扁平化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/30/CSS-1/">CSS(1)</a>
+    <h1 class="article-title" itemprop="name">
+      数组扁平化
     </h1>
   
 
         
-        <a href="/2019/03/30/CSS-1/" class="archive-article-date">
-  	<time datetime="2019-03-30T14:29:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-30</time>
+        <a href="/2020/01/05/数组扁平化/" class="archive-article-date">
+  	<time datetime="2020-01-05T00:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="display"><a href="#display" class="headerlink" title="display"></a>display</h2><p> display: flex 弹性盒子     </p>
-<h3 id="flex-direction-row-row-reverse-column-column-reverse"><a href="#flex-direction-row-row-reverse-column-column-reverse" class="headerlink" title="flex-direction: row || row-reverse  || column || column-reverse"></a>flex-direction: row || row-reverse  || column || column-reverse</h3><ul>
-<li>主轴水平方向，起点在左端；</li>
-<li>主轴水平方向，起点在右端；
-        
-          <a class="article-more-a" href="/2019/03/30/CSS-1/#more">more >></a>
-        
-      
+        <h3 id="数组扁平化相关"><a href="#数组扁平化相关" class="headerlink" title="数组扁平化相关"></a>数组扁平化相关</h3><ol>
+<li>请实现一个flattenDeep函数，把多维数组扁平化<a id="more"></a>
+<h4 id="数组扁平化解析"><a href="#数组扁平化解析" class="headerlink" title="数组扁平化解析"></a>数组扁平化解析</h4><ul>
+<li>Array.prototype.flat()用于将嵌套的数组“拉平”，变成一维的数组。</li>
+<li>flat()默认只会“拉平”一层，如果想要“拉平”多层的嵌套数组，可以将flat()方法的参数写成一个整数，表示想要拉平的层数，默认为1。</li>
+<li>不管有多少层嵌套，都要转成一维数组，可以用Infinity关键字作为参数。</li>
+<li>flatMap()方法对原数组的每个成员执行一个函数（相当于执行Array.prototype.map()），然后对返回值组成的数组执行flat()方法。该方法返回一个新数组，不改变原数组。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>].flatMap(<span class="function">(<span class="params">x</span>) =&gt;</span> [x, x * <span class="number">2</span>])</span><br><span class="line"><span class="comment">// 相当于 [[2, 4], [3, 6], [4, 8]].flat()</span></span><br><span class="line"><span class="comment">// [2, 4, 3, 6, 4, 8]</span></span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flattenDeep</span>(<span class="params">arr, result = []</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(arr[i])) &#123;</span><br><span class="line">            flattenDeep(arr[i], result)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>面试题 已知如下数组：<code>var arr = [ [1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14] ] ] ], 10];</code>编写一个程序将数组扁平化去并除其中重复部分数据，最终得到一个<em>升序且不重复</em>的数组<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>], [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, [<span class="number">11</span>, <span class="number">12</span>, [<span class="number">12</span>, <span class="number">13</span>, [<span class="number">14</span>]]]], <span class="number">10</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flat</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Set</span>([...arr.flat(<span class="literal">Infinity</span>).sort(<span class="function">(<span class="params">m, n</span>) =&gt;</span> m - n)])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 
       
 
       
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/22/JS-1/">JS(1)</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/22/JS-1/" class="archive-article-date">
-  	<time datetime="2019-03-22T14:28:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h2><h3 id="dom"><a href="#dom" class="headerlink" title="dom"></a>dom</h3><ul>
-<li>onclick 只能注册一个事件，后面的会把前面的覆盖 dom-0时代
-        
-          <a class="article-more-a" href="/2019/03/22/JS-1/#more">more >></a>
-        
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -293,10 +253,73 @@
       
 
       
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/05/数组扁平化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/16/对于antd中使用DatePicker的错误问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对于antd中使用DatePicker的错误问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -311,89 +334,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-First-Blog-For-Github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/20/First-Blog-For-Github/">First Blog For Github</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/20/First-Blog-For-Github/" class="archive-article-date">
-  	<time datetime="2018-12-20T10:20:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h2><p>  经过一番折腾，终于初步搭建好了我的个人博客。思来想去，非常感谢Github的Github Pages服务，于是决定将第一篇博文献给Github，稍微记录一下刚开始git学习时记录的一些片段。</p>
-        
-          <a class="article-more-a" href="/2018/12/20/First-Blog-For-Github/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组扁平化相关"><span class="toc-number">1.</span> <span class="toc-text">数组扁平化相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组扁平化解析"><span class="toc-number">1.1.</span> <span class="toc-text">数组扁平化解析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题目解析"><span class="toc-number">1.2.</span> <span class="toc-text">题目解析</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
 
 
@@ -416,8 +382,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
